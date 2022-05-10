@@ -36,56 +36,56 @@ public class User_Registration_Problem {
         System.out.println("Enter the Email-id : ");
         String mail_id=scanner.next();
         //Expression for Mail-id
-        String rejex="^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+$";
+        String rejex_mailid="^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+$";
         //Creating pattern object
-        Pattern P=Pattern.compile(rejex);
+        Pattern P2=Pattern.compile(rejex_mailid);
         //Creating matcher object
-        Matcher M=P.matcher(mail_id);
-        boolean R=M.matches();
+        Matcher M2=P2.matcher(mail_id);
+        boolean R2=M2.matches();
 
         //Checking whether entered Mail-id is valid pr not
-        if(R)
+        if(R2)
             System.out.println("Entered Mail-id is Valid");
         else
             System.out.println("Entered Mail-d is Invalid");
-        return R;
+        return R2;
     }
 
     public static boolean Mobile_Number(){
         System.out.println("Enter the Mobile Number : ");
         String mobile_number=scanner.next();
         //Expression for Mail-id
-        String rejex="^[0-9]{2}\\s{0,1}[0-9]{10}$";
+        String rejex_mobile="^[0-9]{2}\\s{0,1}[0-9]{10}$";
         //Creating pattern object
-        Pattern P=Pattern.compile(rejex);
+        Pattern P3=Pattern.compile(rejex_mobile);
         //Creating matcher object
-        Matcher M=P.matcher(mobile_number);
-        boolean R=M.matches();
+        Matcher M3=P3.matcher(mobile_number);
+        boolean R3=M3.matches();
 
         //Checking whether entered Mail-id is valid pr not
-        if(R)
+        if(R3)
             System.out.println("Entered Mobile Number is Valid");
         else
             System.out.println("Entered Mobile Number is Invalid");
-        return R;
+        return R3;
     }
 
     public static boolean Password(){
         System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.next();
         //Expression for Password
-        String rejex="^[A-Z]{1}[a-zA-Z0-9]{7,}$";
+        String rejex_password="^[A-Z]{1}[a-zA-Z]{6,}[0-9]{1,}$";
         //Creating pattern object
-        Pattern P=Pattern.compile(rejex);
+        Pattern P4=Pattern.compile(rejex_password);
         //Creating matcher object
-        Matcher M=P.matcher(password);
-        boolean R=M.matches();
+        Matcher M4=P4.matcher(password);
+        boolean R4=M4.matches();
 
         //Checking whether entered Mail-id is valid pr not
-        if(R)
+        if(R4)
             System.out.println("Entered password is Valid");
         else
             System.out.println("Entered password is Invalid");
-        return R;
+        return R4;
     }
 }
