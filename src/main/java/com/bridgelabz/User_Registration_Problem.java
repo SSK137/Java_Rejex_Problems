@@ -54,7 +54,7 @@ public class User_Registration_Problem {
     public static boolean Mobile_Number(){
         System.out.println("Enter the Mobile Number : ");
         String mobile_number=scanner.next();
-        //Expression for Mail-id
+        //Expression for mobile Number
         String rejex_mobile="^[0-9]{2}\\s{0,1}[0-9]{10}$";
         //Creating pattern object
         Pattern P3=Pattern.compile(rejex_mobile);
