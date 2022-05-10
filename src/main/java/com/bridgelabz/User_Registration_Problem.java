@@ -27,4 +27,19 @@ public class User_Registration_Problem {
             System.out.println("Entered Invalid First Name ");
         return R;
     }
+
+    public static boolean Email_id(){
+        System.out.println("Enter the Email-id : ");
+        String F_Name=scanner.next();
+        String rejex="^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+$";
+        Pattern P=Pattern.compile(rejex);
+        Matcher M=P.matcher(F_Name);
+        boolean R=M.matches();
+
+        if(R)
+            System.out.println("Entered Mail-id is Valid");
+        else
+            System.out.println("Entered Mail-d is Invalid");
+        return R;
+    }
 }
