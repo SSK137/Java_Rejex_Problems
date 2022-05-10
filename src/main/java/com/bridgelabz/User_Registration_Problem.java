@@ -74,7 +74,7 @@ public class User_Registration_Problem {
         System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.next();
         //Expression for Password
-        String rejex="^[a-zA-Z]{8,}$";
+        String rejex="^[A-Z]{1}[a-zA-Z]{7,}$";
         //Creating pattern object
         Pattern P=Pattern.compile(rejex);
         //Creating matcher object
@@ -85,7 +85,7 @@ public class User_Registration_Problem {
         if(R)
             System.out.println("Entered password is Valid");
         else
-            System.out.println("Entered password-d is Invalid");
+            System.out.println("Entered password is Invalid");
         return R;
     }
 }
