@@ -53,13 +53,13 @@ public class User_Registration_Problem {
 
     public static boolean Mobile_Number(){
         System.out.println("Enter the Mobile Number : ");
-        String mail_id=scanner.next();
+        String mobile_number=scanner.next();
         //Expression for Mail-id
         String rejex="^[0-9]{2}\\s{0,1}[0-9]{10}$";
         //Creating pattern object
         Pattern P=Pattern.compile(rejex);
         //Creating matcher object
-        Matcher M=P.matcher(mail_id);
+        Matcher M=P.matcher(mobile_number);
         boolean R=M.matches();
 
         //Checking whether entered Mail-id is valid pr not
@@ -74,7 +74,7 @@ public class User_Registration_Problem {
         System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.next();
         //Expression for Password
-        String rejex="^[A-Z]{1}[a-zA-Z]{7,}$";
+        String rejex="^[A-Z]{1}[a-zA-Z0-9]{7,}$";
         //Creating pattern object
         Pattern P=Pattern.compile(rejex);
         //Creating matcher object
