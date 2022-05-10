@@ -74,7 +74,7 @@ public class User_Registration_Problem {
         System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.next();
         //Expression for Mail-id
-        String rejex="^[a-zA-Z]{8}$";
+        String rejex="^[a-zA-Z]{8,}$";
         //Creating pattern object
         Pattern P=Pattern.compile(rejex);
         //Creating matcher object
