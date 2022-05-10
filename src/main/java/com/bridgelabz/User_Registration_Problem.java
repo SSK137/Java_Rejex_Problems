@@ -69,4 +69,23 @@ public class User_Registration_Problem {
             System.out.println("Entered Mobile Number is Invalid");
         return R;
     }
+
+    public static boolean Password(){
+        System.out.println("Enter the Password Having Minimum 8 Character: ");
+        String password=scanner.next();
+        //Expression for Mail-id
+        String rejex="^[a-zA-Z]{8}$";
+        //Creating pattern object
+        Pattern P=Pattern.compile(rejex);
+        //Creating matcher object
+        Matcher M=P.matcher(password);
+        boolean R=M.matches();
+
+        //Checking whether entered Mail-id is valid pr not
+        if(R)
+            System.out.println("Entered password is Valid");
+        else
+            System.out.println("Entered password-d is Invalid");
+        return R;
+    }
 }
