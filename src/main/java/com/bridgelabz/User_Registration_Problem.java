@@ -50,4 +50,23 @@ public class User_Registration_Problem {
             System.out.println("Entered Mail-d is Invalid");
         return R;
     }
+
+    public static boolean Mobile_Number(){
+        System.out.println("Enter the Mobile Number : ");
+        String mail_id=scanner.next();
+        //Expression for Mail-id
+        String rejex="^[0-9]{2}\\s{0,1}[0-9]{10}$";
+        //Creating pattern object
+        Pattern P=Pattern.compile(rejex);
+        //Creating matcher object
+        Matcher M=P.matcher(mail_id);
+        boolean R=M.matches();
+
+        //Checking whether entered Mail-id is valid pr not
+        if(R)
+            System.out.println("Entered Mobile Number is Valid");
+        else
+            System.out.println("Entered Mobile Number is Invalid");
+        return R;
+    }
 }

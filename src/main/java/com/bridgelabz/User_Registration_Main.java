@@ -6,7 +6,7 @@ public class User_Registration_Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Java Rejex Problems");
         User_Registration_Problem userRegistrationProblem=new User_Registration_Problem();
-        System.out.println("Enter Your Choice \n1)First Name and Last Name : \n2)Email-id :");
+        System.out.println("Enter Your Choice\n1)First Name and Last Name:\n2)Email-id:\n3)Mobile Number");
         Scanner scanner=new Scanner(System.in);
         int choice=scanner.nextInt();
         switch (choice)
@@ -16,6 +16,9 @@ public class User_Registration_Main {
                 break;
             case 2:
                 userRegistrationProblem.Email_id();
+                break;
+            case 3:
+                userRegistrationProblem.Mobile_Number();
                 break;
             default:
                 System.out.println("Wrong Choice");
