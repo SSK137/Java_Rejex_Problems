@@ -6,9 +6,9 @@ public class User_Registration_Problem {
 
     public static boolean First_Name(){
         System.out.println("Enter the First Name : ");
-        String F_Name=scanner.next();           //F_Name is First Name
+        String F_Name=scanner.nextLine();           //F_Name is First Name
         System.out.println("Enter the Last Name : ");
-        String L_Name=scanner.next();           //L_name is Last Name
+        String L_Name=scanner.nextLine();           //L_name is Last Name
         //Expression to check First Name and Last Name
         String Fname_rejex="^[A-Z]{1}[a-z]{2,}$";
         String Lname_rejex="^[A-Z]{1}[a-z]{2,}$";
@@ -34,9 +34,9 @@ public class User_Registration_Problem {
 
     public static boolean Email_id(){
         System.out.println("Enter the Email-id : ");
-        String mail_id=scanner.next();
+        String mail_id=scanner.nextLine();
         //Expression for Mail-id
-        String rejex_mailid="^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+$";
+        String rejex_mailid="^[a-zA-Z0-9.-]+@[a-zA-Z0-9.]+$";
         //Creating pattern object
         Pattern P2=Pattern.compile(rejex_mailid);
         //Creating matcher object
@@ -53,7 +53,7 @@ public class User_Registration_Problem {
 
     public static boolean Mobile_Number(){
         System.out.println("Enter the Mobile Number : ");
-        String mobile_number=scanner.next();
+        String mobile_number=scanner.nextLine();
         //Expression for mobile Number
         String rejex_mobile="^[0-9]{2}\\s{0,1}[0-9]{10}$";
         //Creating pattern object
@@ -72,9 +72,9 @@ public class User_Registration_Problem {
 
     public static boolean Password(){
         System.out.println("Enter the Password Having Minimum 8 Character: ");
-        String password=scanner.next();
+        String password=scanner.nextLine();
         //Expression for Password
-        String rejex_password="^[A-Z]{1}[a-zA-Z]{6,}[0-9]{1,}$";
+        String rejex_password="^[A-Z]{1}[a-zA-Z!]{5,}[@#$%^&*]{1}[0-9]{1,}$";
         //Creating pattern object
         Pattern P4=Pattern.compile(rejex_password);
         //Creating matcher object
