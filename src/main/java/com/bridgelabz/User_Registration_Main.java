@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
+/*
 public class User_Registration_Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Java Rejex Problems");
@@ -15,3 +16,4 @@ public class User_Registration_Main {
         }while (Answer==1);
     }
 }
+*/

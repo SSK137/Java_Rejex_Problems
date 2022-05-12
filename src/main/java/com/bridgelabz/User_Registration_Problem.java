@@ -4,9 +4,9 @@ import java.util.regex.*;
 public class User_Registration_Problem {
     public static Scanner scanner=new Scanner(System.in);
 
-    public static boolean First_Name(){
-        System.out.println("Enter the First Name : ");
-        String F_Name=scanner.next();           //F_Name is First Name
+    public static boolean First_Name(String F_Name){
+        /*System.out.println("Enter the First Name : ");
+        String F_Name=scanner.next(); */          //F_Name is First Name
         //Expression to check First Name and Last Name
         String Fname_rejex="^[A-Z]{1}[a-z]{2,}$";
         //Creating Object for Pattern
@@ -16,16 +16,16 @@ public class User_Registration_Problem {
         boolean R=M.matches();
 
         //Checking whether entered input is valid or not
-        if(R)
+      /*  if(R)
             System.out.println("Entered First Name is Valid");
         else
-            System.out.println("Entered First Name is Invalid");
+            System.out.println("Entered First Name is Invalid");*/
         return R;
     }
 
-    public static boolean Last_Name(){
-        System.out.println("Enter the Last Name : ");
-        String L_Name=scanner.nextLine();           //L_Name is Last Name
+    public static boolean Last_Name(String L_Name){
+        /*System.out.println("Enter the Last Name : ");
+        String L_Name=scanner.nextLine();*/           //L_Name is Last Name
         //Expression for Last Name
         String rejex_LastName="^[A-Z]{1}[a-z]{2,}$";
         //Creating pattern object
@@ -42,11 +42,11 @@ public class User_Registration_Problem {
         return R2;
     }
 
-    public static boolean Email_id(){
-        System.out.println("Enter the Email-id : ");
-        String mail_id=scanner.nextLine();
+    public static boolean Email_id(String mail_id){
+        /*System.out.println("Enter the Email-id : ");
+        String mail_id=scanner.nextLine();*/
         //Expression for Mail-id
-        String rejex_mailid="^[a-z]{3,}(.[-+a-z0-9]*)?@([a-z0-9]){1,}.[a-z]{2,}+(.[a-z]{2,})*";
+        String rejex_mailid="^[a-zA-Z0-9.-]+@[a-zA-Z0-9.]+$";
         //Creating pattern object
         Pattern P2=Pattern.compile(rejex_mailid);
         //Creating matcher object
@@ -60,9 +60,9 @@ public class User_Registration_Problem {
         return R2;
     }
 
-    public static boolean Mobile_Number(){
-        System.out.println("Enter the Mobile Number : ");
-        String mobile_number=scanner.nextLine();
+    public static boolean Mobile_Number(String mobile_number){
+        /*System.out.println("Enter the Mobile Number : ");
+        String mobile_number=scanner.nextLine();*/
         //Expression for mobile Number
         String rejex_mobile="^[0-9]{2}\\s{0,1}[0-9]{10}$";
         //Creating pattern object
@@ -79,9 +79,9 @@ public class User_Registration_Problem {
         return R3;
     }
 
-    public static boolean Password(){
-        System.out.println("Enter the Password Having Minimum 8 Character: ");
-        String password=scanner.nextLine();
+    public static boolean Password(String password){
+        /*System.out.println("Enter the Password Having Minimum 8 Character: ");
+        String password=scanner.nextLine();*/
         //Expression for Password
         String rejex_password="^[A-Z]{1}[a-zA-Z!]{5,}[@#$%^&*]{1}[0-9]{1,}$";
         //Creating pattern object
@@ -98,7 +98,7 @@ public class User_Registration_Problem {
         return R4;
     }
 
-    public void MainMenu() {
+  /*  public void MainMenu() {
         System.out.println("Enter Your Choice\n1)First Name:\n2)Last Name: \n3)Email-id:\n4)Mobile Number\n5)Password");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -121,5 +121,5 @@ public class User_Registration_Problem {
             default:
                 System.out.println("Wrong Choice");
         }
-    }
+    }*/
 }
