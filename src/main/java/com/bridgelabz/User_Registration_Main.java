@@ -5,26 +5,13 @@ import java.util.Scanner;
 public class User_Registration_Main {
     public static void main(String[] args) {
         System.out.println("Welcome to Java Rejex Problems");
-        User_Registration_Problem userRegistrationProblem=new User_Registration_Problem();
-        System.out.println("Enter Your Choice\n1)First Name and Last Name:\n2)Email-id:\n3)Mobile Number\n4)Password");
         Scanner scanner=new Scanner(System.in);
-        int choice=scanner.nextInt();
-        switch (choice)
-        {
-            case 1:
-                userRegistrationProblem.First_Name();
-                break;
-            case 2:
-                userRegistrationProblem.Email_id();
-                break;
-            case 3:
-                userRegistrationProblem.Mobile_Number();
-                break;
-            case 4:
-                userRegistrationProblem.Password();
-                break;
-            default:
-                System.out.println("Wrong Choice");
-        }
+        int Answer;
+        User_Registration_Problem userRegistrationProblem=new User_Registration_Problem();
+        do{
+            userRegistrationProblem.MainMenu();
+            System.out.println("Do you Wants to Continue If yes then Enter 1 :");
+            Answer=scanner.nextInt();
+        }while (Answer==1);
     }
 }
