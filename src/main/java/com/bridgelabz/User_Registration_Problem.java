@@ -4,7 +4,7 @@ import java.util.regex.*;
 public class User_Registration_Problem {
     public static Scanner scanner=new Scanner(System.in);
 
-    public static boolean First_Name(String F_Name){
+    public static boolean First_Name(String F_Name) throws InvalidUserException{
         /*System.out.println("Enter the First Name : ");
         String F_Name=scanner.next(); */          //F_Name is First Name
         //Expression to check First Name and Last Name
@@ -16,14 +16,14 @@ public class User_Registration_Problem {
         boolean R=M.matches();
 
         //Checking whether entered input is valid or not
-      /*  if(R)
-            System.out.println("Entered First Name is Valid");
+        if(R)
+            System.out.println("Entered Name is in valid");
         else
-            System.out.println("Entered First Name is Invalid");*/
+            throw new InvalidUserException("Entered First Name is Invalid");
         return R;
     }
 
-    public static boolean Last_Name(String L_Name){
+    public static boolean Last_Name(String L_Name) throws InvalidUserException{
         /*System.out.println("Enter the Last Name : ");
         String L_Name=scanner.nextLine();*/           //L_Name is Last Name
         //Expression for Last Name
@@ -38,11 +38,11 @@ public class User_Registration_Problem {
         if(R2)
             System.out.println("Entered Last Name is Valid");
         else
-            System.out.println("Entered Last Name is Invalid");
+            throw new InvalidUserException("Entered Last Name is Invalid");
         return R2;
     }
 
-    public static boolean Email_id(String mail_id){
+    public static boolean Email_id(String mail_id) throws InvalidUserException{
         /*System.out.println("Enter the Email-id : ");
         String mail_id=scanner.nextLine();*/
         //Expression for Mail-id
@@ -56,11 +56,11 @@ public class User_Registration_Problem {
         if(R2)
             System.out.println("Entered Mail-id is Valid");
         else
-            System.out.println("Entered Mail-d is Invalid");
+            throw new InvalidUserException("Entered Mail-id id Invalid");
         return R2;
     }
 
-    public static boolean Mobile_Number(String mobile_number){
+    public static boolean Mobile_Number(String mobile_number) throws InvalidUserException{
         /*System.out.println("Enter the Mobile Number : ");
         String mobile_number=scanner.nextLine();*/
         //Expression for mobile Number
@@ -75,11 +75,11 @@ public class User_Registration_Problem {
         if(R3)
             System.out.println("Entered Mobile Number is Valid");
         else
-            System.out.println("Entered Mobile Number is Invalid");
+            throw new InvalidUserException("Entered Mobile Number is Invalid");
         return R3;
     }
 
-    public static boolean Password(String password){
+    public static boolean Password(String password) throws InvalidUserException{
         /*System.out.println("Enter the Password Having Minimum 8 Character: ");
         String password=scanner.nextLine();*/
         //Expression for Password
@@ -94,7 +94,7 @@ public class User_Registration_Problem {
         if(R4)
             System.out.println("Entered password is Valid");
         else
-            System.out.println("Entered password is Invalid");
+            throw new InvalidUserException("Entered Password is Invalid");
         return R4;
     }
 
