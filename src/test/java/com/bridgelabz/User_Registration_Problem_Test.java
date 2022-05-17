@@ -15,6 +15,36 @@ public class User_Registration_Problem_Test {
             System.out.println("Exception Occurs\n"+ e);
         }
     }
+    @Test
+    public void givenFirstName_WhenProper_ShouldReturnfalse() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidate.validate("saurabh"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void givenFirstName_WhenProper_ShouldReturnnull() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidate.validate(null));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void givenFirstName_WhenProper_ShouldReturnEmpty() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidate.validate(""));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
 
    /* @Test
     public void givenFirstName_WhenProper_ShouldReturnFalse() {
@@ -27,6 +57,36 @@ public class User_Registration_Problem_Test {
     public void giveLastName_WhenProper_ShouldReturnTrue() {
         try {
             Assertions.assertTrue(userRegistrationProblem.userValidate_LName.validate("Kodam"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveLastName_WhenProper_ShouldReturnfalse() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidate_LName.validate("kodam"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveLastName_WhenProper_ShouldReturnNull() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidate_LName.validate(null));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveLastName_WhenProper_ShouldReturnEmpty() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidate_LName.validate(""));
         }
         catch (InvalidUserException e)
         {
@@ -51,6 +111,36 @@ public class User_Registration_Problem_Test {
             System.out.println("Exception Occurs\n"+ e);
         }
     }
+    @Test
+    public void giveEmail_WhenProper_ShouldReturnfalse() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidateMail.validate("@saurabh.kodam@gmail.com"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveEmail_WhenProper_ShouldReturnNUll() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidateMail.validate(null));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveEmail_WhenProper_ShouldReturnEmpty() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidateMail.validate(""));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
     /*@Test
     public void giveEmail_WhenProper_ShouldReturnfalse() {
         boolean result2 = userRegistrationProblem.Email_id("@saurabhkodam@gmail.com");
@@ -62,6 +152,36 @@ public class User_Registration_Problem_Test {
     public void giveMobileNo_WhenProper_ShouldReturnTrue() {
         try {
             Assertions.assertTrue(userRegistrationProblem.userValidateMB.validate("91 9890333349"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveMobileNo_WhenProper_ShouldReturnfalse() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidateMB.validate("91 980333349"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveMobileNo_WhenProper_ShouldReturnNull() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidateMB.validate(null));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void giveMobileNo_WhenProper_ShouldReturnEmpty() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidateMB.validate(""));
         }
         catch (InvalidUserException e)
         {
@@ -80,6 +200,36 @@ public class User_Registration_Problem_Test {
     public void givePassword_WhenProper_ShouldReturnTrue() {
         try {
             Assertions.assertTrue(userRegistrationProblem.userValidatePassword.validate("Saurabh@123"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void givePassword_WhenProper_ShouldReturnfalse() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidatePassword.validate("saurabh@123"));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void givePassword_WhenProper_ShouldReturnNull() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidatePassword.validate(null));
+        }
+        catch (InvalidUserException e)
+        {
+            System.out.println("Exception Occurs\n"+ e);
+        }
+    }
+    @Test
+    public void givePassword_WhenProper_ShouldReturnEmpty() {
+        try {
+            Assertions.assertTrue(userRegistrationProblem.userValidatePassword.validate(""));
         }
         catch (InvalidUserException e)
         {
