@@ -8,7 +8,7 @@ public class User_Registration_Problem_Test {
     @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() {
         try {
-            Assertions.assertTrue(userRegistrationProblem.First_Name("saurabh"));
+            Assertions.assertTrue(userRegistrationProblem.userValidate.validate("Saurabh"));
         }
         catch (InvalidUserException e)
         {
@@ -26,7 +26,7 @@ public class User_Registration_Problem_Test {
     @Test
     public void giveLastName_WhenProper_ShouldReturnTrue() {
         try {
-            Assertions.assertTrue(userRegistrationProblem.Last_Name("Kodam"));
+            Assertions.assertTrue(userRegistrationProblem.userValidate_LName.validate("Kodam"));
         }
         catch (InvalidUserException e)
         {
@@ -44,7 +44,7 @@ public class User_Registration_Problem_Test {
     @Test
     public void giveEmail_WhenProper_ShouldReturnTrue() {
         try {
-            Assertions.assertTrue(userRegistrationProblem.Email_id("saurabhkodam@gmail.com"));
+            Assertions.assertTrue(userRegistrationProblem.userValidateMail.validate("saurabh.kodam@gmail.com"));
         }
         catch (InvalidUserException e)
         {
@@ -61,7 +61,7 @@ public class User_Registration_Problem_Test {
     @Test
     public void giveMobileNo_WhenProper_ShouldReturnTrue() {
         try {
-            Assertions.assertTrue(userRegistrationProblem.Mobile_Number("91 9890333349"));
+            Assertions.assertTrue(userRegistrationProblem.userValidateMB.validate("91 9890333349"));
         }
         catch (InvalidUserException e)
         {
@@ -79,7 +79,7 @@ public class User_Registration_Problem_Test {
     @Test
     public void givePassword_WhenProper_ShouldReturnTrue() {
         try {
-            Assertions.assertTrue(userRegistrationProblem.Password("Saurabh@123"));
+            Assertions.assertTrue(userRegistrationProblem.userValidatePassword.validate("Saurabh@123"));
         }
         catch (InvalidUserException e)
         {
